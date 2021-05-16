@@ -1,0 +1,46 @@
+sqlite> .open sqlite_CSD.sqlite
+
+sqlite> .tables
+CSD
+
+sqlite> .schema CSD
+CREATE TABLE IF NOT EXISTS "CSD" (
+"ca" REAL,
+  "community_area_name" TEXT,
+  "percent_of_housing_crowded" REAL,
+  "percent_households_below_poverty" REAL,
+  "percent_aged_16_unemployed" REAL,
+  "percent_aged_25_without_high_school_diploma" REAL,
+  "percent_aged_under_18_or_over_64" REAL,
+  "per_capita_income_" INTEGER,
+  "hardship_index" REAL
+);
+
+sqlite> pragma table_info('CSD');
+0|ca|REAL|0||0
+1|community_area_name|TEXT|0||0
+2|percent_of_housing_crowded|REAL|0||0
+3|percent_households_below_poverty|REAL|0||0
+4|percent_aged_16_unemployed|REAL|0||0
+5|percent_aged_25_without_high_school_diploma|REAL|0||0
+6|percent_aged_under_18_or_over_64|REAL|0||0
+7|per_capita_income_|INTEGER|0||0
+8|hardship_index|REAL|0||0
+
+
+sqlite> .header on
+sqlite> .mode column
+sqlite> pragma table_info('CSD');
+cid         name        type        notnull     dflt_value  pk        
+----------  ----------  ----------  ----------  ----------  ----------
+0           ca          REAL        0                       0         
+1           community_  TEXT        0                       0         
+2           percent_of  REAL        0                       0         
+3           percent_ho  REAL        0                       0         
+4           percent_ag  REAL        0                       0         
+5           percent_ag  REAL        0                       0         
+6           percent_ag  REAL        0                       0         
+7           per_capita  INTEGER     0                       0         
+8           hardship_i  REAL        0                       0         
+
+
